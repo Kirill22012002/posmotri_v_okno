@@ -12,13 +12,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -44,8 +44,8 @@ ol {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  width: 1140px;
   gap: 30px;
+  width: 1140px;
 }
 
 .result__video-container {
@@ -61,7 +61,6 @@ ol {
   object-fit: fill;
 }
 
-
 .search-form {
   display: flex;
   flex-direction: row;
@@ -70,8 +69,8 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 21.6px;
 }
 
@@ -97,10 +96,10 @@ ol {
 }
 
 .title {
-  font-size: 75px;
-  font-weight: 700;
-  line-height: 70.5px;
   font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
   text-transform: uppercase;
 }
 
@@ -110,11 +109,11 @@ ol {
 
 .content__list {
   position: relative;
-  height: 298px;
-  overflow: hidden scroll;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  height: 298px;
+  overflow: hidden scroll;
 }
 
 .content__video-card {
@@ -126,7 +125,7 @@ ol {
   контейнера по дополнительной оси.*/
   justify-content: space-between;
   align-content: flex-start;
-    /* 
+  /* 
     Интересно что такое дополнительная ось.
     */
 }
@@ -142,4 +141,40 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+}
+
+.content__card-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
