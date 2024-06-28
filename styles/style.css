@@ -41,22 +41,32 @@ ol {
 }
 
 .button {
-  cursor: pointer;
-  background-color: inherit;
   border: 1px solid #fff;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .search-form__submit-button {
   padding: 6px 73.5px;
 }
 
+.search-form__submit-button:focus {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 .more-button {
   padding: 6px 144.5px;
+}
+
+.more-button:focus {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content {
@@ -89,10 +99,10 @@ ol {
 }
 
 .search-form__fieldset {
-  border: none;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  border: none;
 }
 
 .search-form__fieldset-title {
@@ -101,7 +111,7 @@ ol {
   line-height: 21.6px;
 }
 
-.search-form__checkbox-list{
+.search-form__checkbox-list {
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -114,19 +124,25 @@ ol {
   width: fit-content;
 }
 
+.search-form__label:has(:focus-visible) {
+  border: none;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 .search-form__textfield {
   width: 225px;
-  appearance: none;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #fff;
+  padding: 2.5px 9px 2.5px 0;
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
-  color: rgba(255, 255, 255, 0.7);
   background-color: inherit;
-  padding: 2.5px 9px 2.5px 0;
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: #fff;
+  appearance: none;
 }
 
 .search-form__textfield:active {
@@ -134,45 +150,31 @@ ol {
   border-radius: 0%;
 }
 
+.search-form__textfield:focus {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
 
 .search-form__checkbox:checked {
   width: 15px;
   height: 15px;
-  background-color: #fff; 
-  
-}
-
-.search-form__submit-button:active {
-  /*
-  Я не понимаю как реализовать прелоадер, от слова совсем.
-  */
+  background-color: #fff;
 }
 
 .search-form__pseudo-checkbox {
-  cursor: pointer;
   width: 19px;
   height: 19px;
-  background-color: inherit;
-  border: 1px solid #fff;
   margin-top: 1px;
-}
-
-.search-form__pseudo-checkbox:active {
-
+  border: 1px solid #fff;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
-
-  /* Растянуть .content__details во всю доступную ширину и высоту 
-  контейнера и добавить отступы между заголовком и зоной с карточками.*/
   justify-content: space-between;
   align-content: space-between;
-  /*
-  По идее таким образом мы и растянули, и уже позже будет происходить увеличение
-  блока, за счёт того контента, который будет находится внутри.
-  */
   gap: 26px;
 }
 
@@ -187,53 +189,44 @@ ol {
 .content__accent {
   color: #545050;
 }
-
+/**/
 .content__list {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   height: 298px;
   overflow: hidden scroll;
   scrollbar-width: none;
 }
 
-.content__video-card {
-  display: flex;
-  flex-direction: row;
-
-  /* Расположить элементы внутри контейнера 
-  .content__video-card в строку, прижав к началу 
-  контейнера по дополнительной оси.*/
-  justify-content: space-between;
-  align-content: flex-start;
-  /* 
-    Интересно что такое дополнительная ось.
-    */
-}
-
-.content__video-card-description-container {
-  /*Сделать так, чтобы .content__video-card-description-container 
-  занимал всё доступное пространство, не занятое картинкой.
-
-  Тут я пока не совсем понял, что нужно сделать
-  */
-}
-
-.content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+.content__list-item {
+  min-height: 103px;
+  margin-bottom: 30px;
 }
 
 .content__card-link {
   color: #fff;
   text-decoration: none;
+  margin: 1px;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  height: 100%;
+}
+
+.content__video-card:focus {
+  outline: 1px solid #fff;
 }
 
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  padding-top: 6px;
 }
 
 .content__video-card-title {
@@ -251,6 +244,12 @@ ol {
   line-height: 16.2px;
 }
 
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 100%;
+  object-fit: fill;
+}
+/**/
 .visually-hidden {
   position: absolute;
   overflow: hidden;
