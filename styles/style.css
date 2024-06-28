@@ -51,38 +51,25 @@ ol {
   cursor: pointer;
 }
 
+.button:focus {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: rgb(84, 80, 80);
+}
+
 .search-form__submit-button {
   padding: 6px 73.5px;
 }
 
-.search-form__submit-button:focus {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
-.search-form__submit-button:hover {
-  text-decoration: underline;
-}
-
-.search-form__submit-button:active {
-  background-color: rgb(84, 80, 80);
-}
-
 .more-button {
   padding: 6px 144.5px;
-}
-
-.more-button:focus {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
-.more-button:hover {
-  text-decoration: underline;
-}
-
-.more-button:active {
-  background-color: rgb(84, 80, 80);
 }
 
 .content {
@@ -97,7 +84,7 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-  padding-bottom: 16px;
+  margin-bottom: 22px;
 }
 
 .result__video {
@@ -227,7 +214,6 @@ ol {
 }
 
 .content__card-link {
-  margin: 1px;
   color: #fff;
   text-decoration: none;
 }
