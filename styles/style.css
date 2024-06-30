@@ -209,6 +209,7 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   color: #fff;
   text-decoration: none;
 }
@@ -216,6 +217,10 @@ ol {
 .content__card-link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.content__card-link_current {
+  background-color:rgb(84, 80, 80);
 }
 
 .content__video-card {
